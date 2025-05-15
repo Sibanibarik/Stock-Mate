@@ -17,7 +17,7 @@ const AddPurchaseModal = ({ fetchProductss }) => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/products");
+      const res = await axios.get("https://stock-mate-0uuk.onrender.com/products");
       setProductsData(res.data);
       // console.log(res.data);
     } catch (error) {
@@ -34,7 +34,7 @@ const AddPurchaseModal = ({ fetchProductss }) => {
     console.log(purchasesdata);
     try {
       const res = await axios.post(
-        "http://localhost:4000/purchase",
+        "https://stock-mate-0uuk.onrender.com/purchase",
         purchasesdata
       );
       console.log(res);
